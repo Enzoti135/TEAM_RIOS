@@ -495,30 +495,29 @@ table th{
   font-family: "Oswald", sans-serif;
   
 }
-@media (max-width: 768px) {
+@media  only screen and (max-width: 768px) {
   .topo {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    position: static;
   }
 
   .topo img {
-    position: static;
-    margin: 10px 0;
+    margin: 10px auto;
+    display: block;
   }
 
   .topo div {
-    position: static;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 10px;
   }
 
-  .container-texto {
-    height: auto;
-    padding: 40px 20px;
-  }
-
   .container-parallax1 h1 {
-    font-size: 40px;
+    font-size: 32px;
     padding: 10px;
   }
 
@@ -527,20 +526,86 @@ table th{
   .container-parallax5 h3 {
     width: 90%;
     font-size: 18px;
+    top: 30%;
   }
 
-  table {
+  .container-parallax4 h2 {
     width: 90%;
-    font-size: 14px;
-    margin: 0 auto;
+    font-size: 20px;
   }
 
-  iframe {
-    width: 100% !important;
-    height: 300px !important;
+  .container-parallax4 iframe {
+    position: relative;
+    width: 90%;
+    height: 250px;
   }
 
   .container-contatos {
+    position: relative;
     width: 90%;
+    bottom: auto;
+  }
+
+  .lista-horarios,
+  .lista-horarios2,
+  .lista-horarios3,
+  .lista-horarios4 {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    top: auto;
+    bottom: auto;
+  }
+
+  .lista-horarios li p,
+  .lista-horarios2 li p,
+  .lista-horarios3 li p,
+  .lista-horarios4 li p {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .randon,
+  .randon2 {
+    height: auto;
+  }
+
+  .titulo-horarios2,
+  .titulo-horarios3 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .table1,
+  .table2,
+  .table3 {
+    width: 95% !important;
+    position: relative;
+    left: auto;
+    margin: 20px auto;
+  }
+
+  table th {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .container-texto {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .container-texto p {
+    padding: 0 10px;
+  }
+
+  .container-rodape {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+
+  .container-rodape a {
+    display: none; /* Oculta seta flutuante em telas pequenas */
   }
 }
