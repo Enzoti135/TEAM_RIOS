@@ -496,25 +496,40 @@ table th{
   
 }
 
-@media only screen and (max-width: 600px) {
+
+@media (max-width: 768px) {
   .topo {
-    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    position: static;
+    padding: 10px 2%; /* reduz margem lateral */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
+  
   .topo img {
-    margin: 10px auto;
-    display: block;
+    width: 100px;
+    transform: translateX(-60px);
   }
-
+  
   .topo div {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 7px; /* menor espaço entre links */
+  }
+  
+  .topo div a {
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 2px 3px 2px #4dd3ff;
+    letter-spacing: 0.5px; /* reduzido */
+    color: black;
+    transform: translateX(70px);
+    
   }
 
   .container-parallax1 h1 {
@@ -529,114 +544,115 @@ table th{
     font-size: 18px;
     top: 30%;
   }
+  .container-parallax4 {
+    
+    height: 798px;
+    
+  }
+
 
   .container-parallax4 h2 {
     width: 90%;
-    font-size: 20px;
+    font-size: 18px;
+    
+    
+    
   }
 
   .container-parallax4 iframe {
+    width: 100%;
+    height: 428px;
     position: relative;
-    width: 90%;
-    height: 250px;
+    top: 170px;
+    left: 0px;
+    
   }
 
   .container-contatos {
-    position: relative;
     width: 90%;
+    position: relative;
     bottom: auto;
+    top: 166px;
+  }
+
+  .container-texto {
+    padding: 40px 10px;
+    font-size: 14px;
+    line-height: 28px;
+    height: 550px;
+  }
+
+  .container-texto h2 {
+    font-size: 20px;
+  }
+
+  .container-texto p {
+    padding: 0 10px;
+    font-size: 14px;
   }
 
   .lista-horarios,
   .lista-horarios2,
   .lista-horarios3,
   .lista-horarios4 {
-    position: relative;
-    width: 90%;
-    margin: 20px auto;
-    top: auto;
-    bottom: auto;
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .lista-horarios li h3,
+  .lista-horarios2 li h3,
+  .lista-horarios3 li h3,
+  .lista-horarios4 li h3 {
+    font-size: 18px;
+    text-align: center;
   }
 
   .lista-horarios li p,
   .lista-horarios2 li p,
   .lista-horarios3 li p,
   .lista-horarios4 li p {
-    position: relative;
-    top: auto;
-    right: auto;
+    position: static;
+    text-align: center;
+    margin-top: 5px;
   }
 
   .randon,
   .randon2 {
-    height: auto;
+    height: 460px;
   }
 
   .titulo-horarios2,
   .titulo-horarios3 {
     font-size: 20px;
-    margin-top: 30px;
+    margin: 40px 10px;
   }
 
   .table1,
   .table2,
   .table3 {
-    width: 95% !important;
-    position: relative;
-    left: auto;
-    margin: 20px auto;
+    position: static;
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: auto;
+    display: block;
+    
   }
 
   table th {
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px;
-  }
-
-  .container-texto {
-    padding: 40px 20px;
-    height: auto;
-  }
-
-  .container-texto p {
-    padding: 0 10px;
   }
 
   .container-rodape {
     font-size: 14px;
-    padding: 15px 10px;
+    padding: 10px;
   }
 
   .container-rodape a {
-    display: none; /* Oculta seta flutuante em telas pequenas */
-  }
-
-  
-}
-
-.conteudo-dispositivo {
-  display: none;
-}
-
-@media only screen and (max-width: 600px) {
-  .conteudo-dispositivo.pequeno {
-    display: block !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .conteudo-dispositivo.medio {
-    display: block !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .conteudo-dispositivo.grande {
-    display: block !important;
-    height: auto !important;
-    overflow: visible !important;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
   }
 }
